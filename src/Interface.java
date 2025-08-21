@@ -19,6 +19,7 @@ class AvonCycle implements Bicycle{
         System.out.println("Applying accelerator");
     }
 }
+//Default methods allow
 //Interface no object is made but can be used as reference
 public class Interface {
     public static void main(String[] args) {
