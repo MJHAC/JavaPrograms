@@ -1,3 +1,4 @@
+package oops;
 //In interface there is no body for the methods
 interface Bicycle{
     int a=10;

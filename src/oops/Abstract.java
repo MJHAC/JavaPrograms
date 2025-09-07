@@ -1,3 +1,4 @@
+package oops;
 abstract class Base {
     public Base(){
         System.out.println("Hello I am in base class.");
