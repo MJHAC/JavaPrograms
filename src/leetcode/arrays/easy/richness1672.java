@@ -1,4 +1,4 @@
-package leetcode.arrays.hard;
+package leetcode.arrays.easy;
 
 public class richness1672 {
     public static void main(String[] args) {

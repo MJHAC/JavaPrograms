@@ -8,6 +8,8 @@ public class SearchLetter {
         System.out.println("Enter the string:");
         String str=obj.nextLine();
         char ch=obj.next().charAt(0);
+        boolean truth=search(str,ch);
+        if(truth) System.out.println("Found");
     }
     static boolean search(String str,char target){
         if(str.length()==0){
