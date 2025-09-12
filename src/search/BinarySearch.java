@@ -24,23 +24,29 @@ public class BinarySearch {
             }
         }*/
         Arrays.sort(arr);
-        int index=-1,found=0,start=0,last=n-1,target;
+        int target;
         System.out.println("Enter the element to be found:");
         target=obj.nextInt();
-        while(start<=last){
-            int middle=(start+last)/2;
-            if(arr[middle]==target){
-                index=middle;
-                break;
-            }
-            else if(arr[middle]>target){
-                last=middle-1;
-            } else if(arr[middle]<target){
-                start=middle+1;
+        int index=binary(arr,target);
+        if(index==-1){
+            System.out.println("The element is not found");
+        }
+        else{
+            System.out.println("The element is found at the index "+index);
+        }
+    }
+    static int binary(int[] arr,int target){
+        int index = -1, start = 0, end = arr.length- 1;
+        while (start <= end) {
+            int middle = (start + end) / 2;
+            if (arr[middle] == target) {
+                return middle;
+            } else if (arr[middle] > target) {
+                end = middle - 1;
+            } else if (arr[middle] < target) {
+                start = middle + 1;
             }
         }
-        if(index!=1){
-            System.out.println("The element "+target+" is found at the index "+index);
-        }
+        return -1;
     }
 }
